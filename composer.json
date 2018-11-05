@@ -1,0 +1,30 @@
+{
+    "name": "cdz/laravel-auth",
+    "description": "Laravel Package to scaffold all of the files required for authentication customization.",
+    "authors": [
+        {
+            "name": "apalette",
+            "email": "aurelie@codeuz.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "require": {
+ 		"cdz/laravel-bootstrap": "^1.1"
+    },
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "psr-4": {
+            "Cdz\\Auth\\": "src/"
+        }
+    },
+    "extra": {
+	    "laravel": {
+	        "providers": [
+	            "Cdz\\Auth\\AuthServiceProvider"
+	        ]
+	    }
+	}
+}

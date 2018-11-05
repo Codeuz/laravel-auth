@@ -1,0 +1,7 @@
+@extends('layouts.logged')
+
+@section('title', __('layout.dashboard'))
+
+@section('content')
+<h1>{{__('layout.dashboard')}}</h1>
+@endsection

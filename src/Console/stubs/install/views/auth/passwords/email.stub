@@ -1,0 +1,43 @@
+@extends('layouts.unlogged')
+
+@section('title', __('passwords.reset_password'))
+
+@section('content')
+<div class="row">
+	<div class="col-sm-offset-1 col-md-offset-2 col-lg-offset-3 col-sm-10 col-md-8 col-lg-6">
+		<h1>{{__('passwords.reset_password')}}</h1>
+		<form method="POST" action="{{ route('password.email') }}">
+    		@csrf
+			<div class="panel panel-default">
+				<div class="panel-body text-left">
+					@if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                    @endif
+		    		<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+		    			<label for="email">{{ __('auth.email') }}</label>
+		    			<input type="email" name="email" class="form-control" id="email" placeholder="{{ __('auth.email') }}" value="{{ old('email') }}" required autofocus>
+		    			@if ($errors->has('email'))
+                        <div class="help-block text-danger">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </div>
+                        @endif
+		    		</div>
+			  	</div>
+			</div>
+			<div class="text-right">
+				<button type="submit" class="btn btn-primary">{{ __('passwords.send_reset_link') }}</button>
+			</div>
+		</form>
+		<hr/>
+		<div class="row">
+			<div class="col-xs-6 text-left">
+				<a class="btn btn-link" href="{{ route('login') }}">
+		        	{{ __('auth.login') }}
+		        </a>
+			</div>
+		</div>
+	</div>
+</div>
+@endsection

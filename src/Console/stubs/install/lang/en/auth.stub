@@ -1,0 +1,34 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Authentication Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used during authentication for various
+    | messages that we need to display to the user. You are free to modify
+    | these language lines according to your application's requirements.
+    |
+    */
+
+    'failed' => 'These credentials do not match our records.',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'verify_email' => 'Check your email address',
+    'verify_email_resend' => 'A new verification link has been sent to your e-mail address.',
+    'verify_before_proceeding' => 'Before proceeding, please check your email and click on the verification link.',
+    'verify_if_not_receive' => 'If you have not received it',
+    'verify_click_resend' => 'click here to request another',
+
+	'login' => 'Login',
+	'logout' => 'Logout',
+	'email' => 'Email',
+	'password' => 'Password',
+	'confirm_password' => 'Confirm the password',
+	'remember_me' => 'Remember me',
+	'forgotten_password' => 'Forgotten password',
+	'register' => 'Register',
+	'firstname' => 'Firstname',
+	'name' => 'Name'
+];

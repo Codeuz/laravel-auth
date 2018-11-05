@@ -1,0 +1,31 @@
+<?php
+
+namespace {{namespace}}Notifications;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Auth\Notifications\VerifyEmail as VerifyEmailNotification;
+
+class VerifyEmail extends VerifyEmailNotification
+{
+	/**
+     * Get the mail representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
+    public function toMail($notifiable)
+    {
+    	if (static::$toMailCallback) {
+            return call_user_func(static::$toMailCallback, $notifiable);
+        }
+
+        return (new MailMessage)
+        ->subject(config('app.name').' - '.__('messages.verify_email_subject'))
+        ->line(__('messages.verify_email_text1'))
+        ->action(__('messages.verify_email_button'), $this->verificationUrl($notifiable))
+        ->line(__('messages.verify_email_text2'));
+    }
+}

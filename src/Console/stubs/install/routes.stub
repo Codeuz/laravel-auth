@@ -1,0 +1,3 @@
+Route::get('/', 'UnLogged\HomeController@index')->name('home');
+Route::auth(['verify' => true]);
+Route::get('/dashboard', 'Logged\DashboardController@index')->name('logged')->middleware('verified');

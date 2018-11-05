@@ -1,0 +1,27 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Messages Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used into the messages.
+    |
+    */
+
+    'hello' => 'Bonjour !',
+    'whoops' => 'Oups !',
+    'regards' => 'Cordialement',
+    'help_action' => "Si le bouton \":actionText\" ne fonctionne pas, veuillez copier et coller l'adresse suivante \n dans votre navigateur : [:actionURL](:actionURL)",
+    'reset_password_subject' => 'Réinitialisation du mot de passe',
+    'reset_password_text1' => 'Vous recevez cet email car nous avons reçu une demande de réinitialisation de mot de passe pour votre compte.',
+    'reset_password_text2' => 'Si vous n\'avez pas demandé de réinitialisation de mot de passe, veuillez ignorer ce message.',
+    'reset_password_button' => 'Réinialiser le mot de passe',
+    'verify_email_subject' => 'Vérification de l\'adresse email',
+    'verify_email_text1' => 'Veuillez cliquer sur le bouton ci-dessous pour vérifier votre adresse email.',
+    'verify_email_text2' => 'Si vous n\'avez pas créé de compte, veuillez ignorer ce message.',
+    'verify_email_button' => 'Vérifier l\'adresse email',
+    'all_rights' => 'Tous droits réservés.'
+];

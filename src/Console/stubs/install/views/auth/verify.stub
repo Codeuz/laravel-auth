@@ -1,0 +1,20 @@
+@extends('layouts.unlogged')
+
+@section('title', __('auth.verify_email'))
+
+@section('content')
+<div class="row">
+	<div class="col-md-offset-1 col-lg-offset-2 col-md-10 col-lg-8">
+		<h1>{{__('auth.verify_email')}}</h1>
+		@if (session('resent'))
+            <div class="alert alert-success" role="alert">
+                {{ __('auth.verify_email_resend') }}
+            </div>
+        @endif
+        <p>
+        	{{__('auth.verify_before_proceeding')}}<br/>
+        	{{__('auth.verify_if_not_receive')}}, <a href="{{ route('verification.resend') }}">{{ __('auth.verify_click_resend') }}</a>.
+        </p>
+	</div>
+</div>
+@endsection
